@@ -12,10 +12,10 @@ FROM debian:bullseye-slim
 WORKDIR /app
 
 # Copy the compiled binary from the builder stage
-COPY --from=builder /app/target/release/user-service .
+COPY --from=builder /app/target/release/task-service .
 
 # Expose the service port
 EXPOSE 8080
 
 # Run the service
-CMD ["./user-service"]
+CMD ["./task-service"]
